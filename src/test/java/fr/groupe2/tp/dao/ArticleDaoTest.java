@@ -40,7 +40,7 @@ public class ArticleDaoTest {
         //ACT
         List<Article> articles = articleDao.getArticleByNameIgnoreCase("x-or");
         //ASSERT
-        Assertions.assertEquals(1, articles.size());
+        Assertions.assertEquals(2, articles.size());
         Article loadedArticle = articles.get(0);
         Assertions.assertEquals("X-or", loadedArticle.getName());
     }

@@ -17,7 +17,6 @@ public class CategoryDaoTest {
     @Test
     public void testSave(){
         //Arrange
-
         Category category = new Category();
         category.setCategoryName("Boisson");
         //Act
