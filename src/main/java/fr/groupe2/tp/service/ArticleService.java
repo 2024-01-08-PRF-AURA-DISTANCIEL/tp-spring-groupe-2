@@ -26,7 +26,7 @@ public class ArticleService {
 
     public void deleteArticleById(Integer id){
         System.out.println("je supprime l'Id d'un article");
-
+        articleDao.deleteById(id);
     }
 
 

@@ -29,7 +29,7 @@ public class CategoryService {
 
     public void deleteCategoryById(Integer id){
         System.out.println("je supprime l'Id d'un catégorie");
-
+        categoryDao.deleteById(id);
     }
 
 
