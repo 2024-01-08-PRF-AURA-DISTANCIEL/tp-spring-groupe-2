@@ -20,8 +20,6 @@ public class CategoryService {
     private CategoryDao categoryDao;
 
 
-
-
     public Category saveCategory(Category category){
         System.out.println("j'enregistre l'Id d'une catégorie");
         return category;
