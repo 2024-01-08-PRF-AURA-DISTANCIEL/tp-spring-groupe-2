@@ -1,5 +1,11 @@
 package fr.groupe2.tp.dao;
 
-public class UsershopDao {
+import org.springframework.data.repository.CrudRepository;
+
+import fr.groupe2.tp.model.Usershop;
+
+public interface UsershopDao extends CrudRepository<Usershop, Integer> {
+	
+	
 
 }
