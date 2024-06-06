@@ -40,5 +40,4 @@ public class OrdershopController {
 		LOGGER.info("Suppression de Bateau " + id);
 		ordershopService.deleteOrdershopById(id);
 	}
-
 }

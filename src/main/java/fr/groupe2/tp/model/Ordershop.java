@@ -20,10 +20,9 @@ public class Ordershop {
     @Column(name = "created_at")
     private Instant createdAt;
 
-    @ColumnDefault("'PANIER'")
-    @Lob
-    @Column(name = "Status")
-    private String status;
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -38,7 +37,6 @@ public class Ordershop {
         this.id = id;
     }
 
-
     public Instant getCreatedAt() {
         return createdAt;
     }
@@ -47,14 +45,13 @@ public class Ordershop {
         this.createdAt = createdAt;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
-
 
     public Usershop getIdUser() {
         return idUser;
