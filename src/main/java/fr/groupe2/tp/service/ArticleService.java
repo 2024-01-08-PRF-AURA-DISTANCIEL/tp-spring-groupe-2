@@ -38,6 +38,4 @@ public class ArticleService {
             return articleOptional.get();
         }
     }
-
-
 }
