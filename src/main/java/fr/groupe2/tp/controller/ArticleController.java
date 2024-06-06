@@ -36,13 +36,10 @@ public class ArticleController {
 
     }
 
-
     @DeleteMapping("/{id}")
     public void deleteArticleById(@PathVariable("id")Integer id) {
         LOGGER.info("Suppression de Bateau " + id);
         articleService.deleteArticleById(id);
     }
-
-
 
 }

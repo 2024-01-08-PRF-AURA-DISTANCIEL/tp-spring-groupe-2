@@ -35,9 +35,6 @@ public class ArticleDaoTest {
         //ARRANGE
         Article article = new Article();
         article.setName("X-or");
-//        article.setQuantity(3);
-//        article.setPointfidelity(4);
-//        article.setPrice(BigDecimal.valueOf(15));
 
          Article savedArticle = articleDao.save(article);
         //ACT
@@ -47,5 +44,25 @@ public class ArticleDaoTest {
         Article loadedArticle = articles.get(0);
         Assertions.assertEquals("X-or", loadedArticle.getName());
     }
+
+    @Test
+    public void testGetArticleByNameAndPrice() {
+        //ARRANGE
+        Article article = new Article();
+        article.setName("X-or");
+        article.setPrice(BigDecimal.valueOf(200).setScale(2));
+
+        Article savedArticle = articleDao.save(article);
+        //ACT
+        List<Article> articles = articleDao.getArticleByNameAndPrice("X-or", BigDecimal.valueOf(200).setScale(2));
+        //ASSERT
+        Assertions.assertEquals(1, articles.size());
+        Article loadedArticle = articles.get(0);
+        System.out.println(loadedArticle.getPrice());
+        Assertions.assertEquals("X-or", loadedArticle.getName());
+        Assertions.assertEquals(BigDecimal.valueOf(200).setScale(2), loadedArticle.getPrice());
+
+    }
+
 
 }
