@@ -26,8 +26,7 @@ public class UsershopController {
 	@PostMapping
 	public Usershop saveUsershop(@RequestBody Usershop usershop) {
 		LOGGER.info("Sauvegarde d'un user par le contrôleur");
-		usershopService.saveUsershop(usershop);
-		return usershop;
+		return usershopService.saveUsershop(usershop);
 	}
 
 	@GetMapping("/{id}")
@@ -38,7 +37,7 @@ public class UsershopController {
 
 	@DeleteMapping("/{id}")
 	public void deleteUsershopById(@PathVariable("id") Integer id) {
-		LOGGER.info("Suppression de Bateau " + id);
+		LOGGER.info("Suppression d'un user " + id);
 		usershopService.deleteUsershopById(id);
 	}
 

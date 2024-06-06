@@ -27,8 +27,8 @@ public class CategoryController {
     @PostMapping
     public Category save(@RequestBody Category category) {
         LOGGER.info("Sauvegarde d'un article par le contrôleur");
-        categoryService.saveCategory(category);
-        return category;
+        return categoryService.saveCategory(category);
+
     }
 
     @GetMapping("/{id}")

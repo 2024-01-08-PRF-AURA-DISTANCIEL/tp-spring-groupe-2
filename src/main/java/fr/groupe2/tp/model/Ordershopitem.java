@@ -18,7 +18,6 @@ public class Ordershopitem {
 
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "Id_Article")
     private Article idArticle;
 
 

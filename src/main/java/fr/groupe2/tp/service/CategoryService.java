@@ -22,7 +22,7 @@ public class CategoryService {
 
     public Category saveCategory(Category category){
         System.out.println("j'enregistre l'Id d'une catégorie");
-        return category;
+        return categoryDao.save(category);
     }
 
     public void deleteCategoryById(Integer id){

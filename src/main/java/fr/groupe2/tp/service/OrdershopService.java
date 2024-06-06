@@ -2,6 +2,8 @@ package fr.groupe2.tp.service;
 
 import java.util.Optional;
 
+import fr.groupe2.tp.dao.UsershopDao;
+import fr.groupe2.tp.model.Usershop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -9,17 +11,18 @@ import org.springframework.web.server.ResponseStatusException;
 
 import fr.groupe2.tp.dao.OrdershopDao;
 import fr.groupe2.tp.model.Ordershop;
-import fr.groupe2.tp.model.Ordershopitem;
+
 
 @Component
 public class OrdershopService {
 	@Autowired
     private OrdershopDao ordershopDao;
 
+
+
     public Ordershop saveOrdershop(Ordershop ordershop){
         System.out.println("j'enregistre l'Id d'un panier");
         return ordershopDao.save(ordershop);
-
     }
 
     public void deleteOrdershopById(Integer id){
@@ -35,5 +38,9 @@ public class OrdershopService {
             return ordershopOptional.get();
         }
     }
+
+
+
+
 }
 

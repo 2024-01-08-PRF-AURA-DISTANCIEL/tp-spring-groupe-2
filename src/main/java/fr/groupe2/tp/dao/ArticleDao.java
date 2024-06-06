@@ -14,12 +14,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ArticleDao extends CrudRepository<Article, Integer> {
 
-//    @Query("select c from Company c where c.name = :companyNameParam")
-//    public List<Company> getCompanyParNom(@Param("companyNameParam") String companyName);
-
-//    @Query("select c from Company c where c.cash > 10000")
-//    public List<Company> getCompaniesDontCashSuperieur10_000();
-
 
     public List<Article> getArticleByNameIgnoreCase(String name);
 
