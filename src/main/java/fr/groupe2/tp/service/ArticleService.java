@@ -21,7 +21,6 @@ public class ArticleService {
     public Article saveArticle(Article article){
         System.out.println("j'enregistre l'Id d'un article");
         return articleDao.save(article);
-
     }
 
     public void deleteArticleById(Integer id){

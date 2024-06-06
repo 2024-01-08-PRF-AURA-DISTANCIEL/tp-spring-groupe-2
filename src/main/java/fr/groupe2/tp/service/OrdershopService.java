@@ -9,7 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import fr.groupe2.tp.dao.OrdershopDao;
 import fr.groupe2.tp.model.Ordershop;
-import fr.groupe2.tp.model.Ordershopitem;
+
 
 @Component
 public class OrdershopService {
@@ -19,7 +19,6 @@ public class OrdershopService {
     public Ordershop saveOrdershop(Ordershop ordershop){
         System.out.println("j'enregistre l'Id d'un panier");
         return ordershopDao.save(ordershop);
-
     }
 
     public void deleteOrdershopById(Integer id){
