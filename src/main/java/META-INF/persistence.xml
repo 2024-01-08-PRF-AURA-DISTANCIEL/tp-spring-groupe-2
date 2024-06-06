@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
 	<persistence-unit name="tp-spring-groupe-2">
-		<class>fr.groupe2.tp.model.Article</class>
-		<class>fr.groupe2.tp.model.Category</class>
-		<class>fr.groupe2.tp.model.Ordershop</class>
-		<class>fr.groupe2.tp.model.Ordershopitem</class>
-		<class>fr.groupe2.tp.model.Usershop</class>
 	</persistence-unit>
 </persistence>
