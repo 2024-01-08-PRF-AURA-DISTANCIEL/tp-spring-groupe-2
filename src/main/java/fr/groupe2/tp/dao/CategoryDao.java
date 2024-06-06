@@ -1,14 +1,11 @@
 package fr.groupe2.tp.dao;
 
-import java.math.BigDecimal;
 import java.util.List;
 
-import fr.groupe2.tp.model.Article;
-import fr.groupe2.tp.model.Category;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import fr.groupe2.tp.model.Category;
 
 
 
@@ -23,6 +20,11 @@ public interface CategoryDao extends CrudRepository<Category, Integer> {
 
 
     public List<Category> getByCategoryName(String name);
+    
+   
+
+  
+
 
 
 }
