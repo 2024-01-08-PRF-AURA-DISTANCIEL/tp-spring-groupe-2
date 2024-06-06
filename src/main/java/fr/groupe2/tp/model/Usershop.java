@@ -9,27 +9,26 @@ import jakarta.validation.constraints.Size;
 @Table(name = "usershop")
 public class Usershop {
     @Id
-    @Column(name = "Id_User", nullable = false)
+    @Column(name = "Id_User")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Size(max = 100)
 
-    @Column(name = "firstname", nullable = false, length = 100)
+    @Column(name = "firstname",length = 100)
     private String firstname;
 
     @Size(max = 100)
 
-    @Column(name = "lastname", nullable = false, length = 100)
+    @Column(name = "lastname", length = 100)
     private String lastname;
 
     @Size(max = 255)
-
-    @Column(name = "email", nullable = false)
+    @Column(name = "email")
     private String email;
 
 
-    @Column(name = "pointfidelity", nullable = false)
+    @Column(name = "pointfidelity")
     private Integer pointfidelity;
 
     public Integer getId() {

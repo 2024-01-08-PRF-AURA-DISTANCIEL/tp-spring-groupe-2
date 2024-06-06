@@ -10,7 +10,7 @@ import org.springframework.lang.Nullable;
 @Table(name = "category")
 public class Category {
     @Id
-    @Column(name = "Id_Category", nullable = false)
+    @Column(name = "Id_Category")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 

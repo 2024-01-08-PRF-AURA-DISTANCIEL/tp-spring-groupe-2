@@ -10,6 +10,6 @@ import fr.groupe2.tp.model.Ordershop;
 @Repository
 public interface OrdershopDao extends CrudRepository<Ordershop, Integer>{
 	
-	 public List<Ordershop> getByOrderStatus(String orderStatus);
+	 public List<Ordershop> getByStatus(String orderStatus);
 	
 }

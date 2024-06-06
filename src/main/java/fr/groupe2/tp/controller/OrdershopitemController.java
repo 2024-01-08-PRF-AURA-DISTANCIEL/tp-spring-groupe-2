@@ -20,7 +20,7 @@ public class OrdershopitemController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(OrdershopitemController.class);
 	@Autowired
-	OrdershopitemService ordershopitemService;
+	private OrdershopitemService ordershopitemService;
 
 	@PostMapping
 	public Ordershopitem saveOrdershop(@RequestBody Ordershopitem ordershopitem) {

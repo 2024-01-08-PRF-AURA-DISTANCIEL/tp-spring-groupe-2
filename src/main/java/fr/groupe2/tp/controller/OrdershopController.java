@@ -21,7 +21,7 @@ public class OrdershopController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(OrdershopService.class);
 
 	@Autowired
-	OrdershopService ordershopService;
+	private OrdershopService ordershopService;
 
 	@PostMapping
 	public Ordershop saveOrdershopService(@RequestBody Ordershop Ordershop) {
