@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.groupe2.tp.model.Usershop;
+import fr.groupe2.tp.model.Ordershop;
 import fr.groupe2.tp.service.OrdershopService;
 
 @RestController
@@ -24,22 +24,21 @@ public class OrdershopController {
 	OrdershopService ordershopService;
 
 	@PostMapping
-	public OrdershopService saveOrdershopService(@RequestBody OrdershopService ordershopService) {
+	public Ordershop saveOrdershopService(@RequestBody Ordershop Ordershop) {
 		LOGGER.info("Sauvegarde d'un user par le contrôleur");
-		ordershopService.saveOrdershop(ordershopService);
-		return ordershopService;
+		return ordershopService.saveOrdershop(Ordershop);
 	}
 
 	@GetMapping("/{id}")
-	public Usershop getUsershopById(@PathVariable("id") Integer id) {
+	public Ordershop getUsershopById(@PathVariable("id") Integer id) {
 		LOGGER.info("Récupération d'un user avec l'id : " + id);
-		return userOrdershop.getOrdershopService(id);
+		return ordershopService.getOrdershop(id);
 	}
 
 	@DeleteMapping("/{id}")
 	public void deleteUsershopById(@PathVariable("id") Integer id) {
 		LOGGER.info("Suppression de Bateau " + id);
-		OrdershopService.deleteOrdershopById(id);
+		ordershopService.deleteOrdershopById(id);
 	}
 
 }
