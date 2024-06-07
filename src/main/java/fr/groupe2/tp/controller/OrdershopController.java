@@ -24,9 +24,9 @@ public class OrdershopController {
 	OrdershopService ordershopService;
 
 	@PostMapping
-	public Ordershop saveOrdershopService(@RequestBody Ordershop Ordershop) {
+	public Ordershop saveOrdershopService(@RequestBody Ordershop ordershop) {
 		LOGGER.info("Sauvegarde d'un user par le contrôleur");
-		return ordershopService.saveOrdershop(Ordershop);
+		return ordershopService.saveOrdershop(ordershop);
 	}
 
 	@GetMapping("/{id}")

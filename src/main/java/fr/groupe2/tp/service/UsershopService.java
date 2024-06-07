@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
 
+import fr.groupe2.tp.dao.OrdershopDao;
 import fr.groupe2.tp.dao.UsershopDao;
-import fr.groupe2.tp.model.Article;
 import fr.groupe2.tp.model.Usershop;
 
 @Component
@@ -16,6 +16,9 @@ public class UsershopService {
 	    
 	 	@Autowired
 	    private UsershopDao usershopDao;
+
+		@Autowired
+		private OrdershopDao ordershopDao;
 
 	    public Usershop saveUsershop(Usershop usershop){
 	        System.out.println("j'enregistre l'Id d'un achat d'un utilisateur");
@@ -25,7 +28,11 @@ public class UsershopService {
 
 	    public void deleteUsershopById(Integer id){
 	        System.out.println("je supprime l'Id d'un achat d'un utilisateur");
-	        usershopDao.deleteById(id);
+			// Optional<Ordershop> ordershopOptional = ordershopDao.findById(id);
+			// if (ordershopOptional.isEmpty()) {
+			// }
+			usershopDao.deleteById(id);
+
 	    }
 
 
@@ -37,5 +44,6 @@ public class UsershopService {
 	            return usershopOptional.get();
 	        }
 	    }
+
     
 }
