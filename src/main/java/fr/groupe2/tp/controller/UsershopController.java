@@ -46,7 +46,7 @@ public class UsershopController {
 
 		Usershop usershop = usershopService.getUsershop(iduser);
 		usershopService.addUsershop(usershop, article, numberarticles);
-		
+
 	}
 
 }
