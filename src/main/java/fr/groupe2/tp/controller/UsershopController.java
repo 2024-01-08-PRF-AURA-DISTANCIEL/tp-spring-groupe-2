@@ -1,15 +1,11 @@
 package fr.groupe2.tp.controller;
 
+import fr.groupe2.tp.model.Article;
+import fr.groupe2.tp.service.ArticleService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import fr.groupe2.tp.model.Usershop;
 import fr.groupe2.tp.service.UsershopService;
@@ -22,6 +18,8 @@ public class UsershopController {
 
 	@Autowired
 	private UsershopService usershopService;
+    @Autowired
+    private ArticleService articleService;
 
 	@PostMapping
 	public Usershop saveUsershop(@RequestBody Usershop usershop) {
@@ -39,6 +37,16 @@ public class UsershopController {
 	public void deleteUsershopById(@PathVariable("id") Integer id) {
 		LOGGER.info("Suppression d'un user " + id);
 		usershopService.deleteUsershopById(id);
+	}
+
+	@GetMapping("/{iduser}/{idarticle}/{number}")
+	public void addProductUsershop(@PathVariable("iduser") Integer iduser, @PathVariable("idarticle") Integer idarticle, @PathVariable("number") Integer numberarticles ) {
+		//LOGGER.info("Suppression d'un user " + user);
+		Article article = articleService.getArticle(idarticle);
+
+		Usershop usershop = usershopService.getUsershop(iduser);
+		usershopService.addUsershop(usershop, article, numberarticles);
+		
 	}
 
 }

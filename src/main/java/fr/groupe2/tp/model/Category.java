@@ -15,7 +15,7 @@ public class Category {
     private Integer id;
 
 
-    @Column(name = "categoryName",length = 100)
+    @Column(name = "category_name")
     private String categoryName;
 
     public Integer getId() {

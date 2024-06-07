@@ -32,7 +32,7 @@ public class Article {
     private BigDecimal price;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "Id_Category")
     private Category idCategory;
 

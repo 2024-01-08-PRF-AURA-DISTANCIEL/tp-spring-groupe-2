@@ -17,11 +17,11 @@ public class Ordershopitem {
     private Integer numberarticles;
 
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne( optional = false)
     private Article idArticle;
 
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne( optional = false)
     @JoinColumn(name = "Id_Order")
     private Ordershop idOrder;
 
